@@ -32,6 +32,12 @@ Email   		: balapa95@gmail.com
 	padding: 0;
 }
 
+h5 {
+    font-family: "Raleway";
+    font-weight: 300;
+    color: #333;
+}
+
 body {
 	position: absolute;
 	top: 0;
@@ -145,8 +151,15 @@ body {
 
 .occupation {
 	text-align: center;
-	font-family: 'Droid Serif', serif;
+	font-family: 'Indie Flower', cursive;
 	color: #555;
+	font-size: 15px;
+}
+.name {
+	text-align: center;
+	font-family: 'Indie Flower', cursive;
+	color: #555;
+	font-size: 30px;
 }
 
 .morphext > span {
@@ -250,7 +263,7 @@ body {
 }
 
 .expand h1 {
-	font-family: 'Montserrat', serif;
+	font-family: 'Indie Flower', cursive;
 	text-transform: uppercase;
 	color: white;
 	margin-top: 50px;
@@ -259,7 +272,7 @@ body {
 }
 
 .expand .detail {
-	font-family: 'Droid Serif', serif;
+	font-family: 'Indie Flower', cursive;
 	text-align: center;
 	color: white;
 	position: relative;
@@ -408,8 +421,8 @@ body {
 }
 
 .job-detail {
-	margin-top: 25px;
-	padding: 15px 20px;
+	margin-top: 10px;
+	padding: 5px 10px;
 	border-radius: 3px;
 	background: #eaeaea;
 	color: #666;

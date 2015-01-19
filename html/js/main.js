@@ -34,7 +34,7 @@
       			$(".preloader-right").addClass("slide-right");
       			//	Typerjs function - Edit the sentences below
 				$('.hi .detail')
-					.typeTo("I'm Katya. Front-end developer based on Saint Petersburg, Russia. While not coding, i love to play guitar and read comic books.");
+					.typeTo("I am a PhD candidate in the research fields of computer vision, robotics, and 3D video processing. I also have skills in other fields like web development. While not working, I love to play basketball and the Jazz drum.");
       		});
 		});
 
