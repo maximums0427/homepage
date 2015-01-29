@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Max - Portfolio Case</title>
+	<title>Max - Around the World</title>
 	<meta charset="utf-8">
     <meta name="description" content="Responsive Creative CV Template">
     <meta name="author" content="Max">
@@ -22,9 +22,12 @@
 	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 
 	<!-- Favicon -->
-    <link rel="icon" type="image/png" href="img/katya-favicon.png">		
+    <link rel="icon" type="image/png" href="img/katya-favicon.png">	
+    <script src="http://maps.google.com/maps/api/js?sensor=false" 
+          type="text/javascript"></script>
 </head>
 <body>
+	
 
 	<!-- begin .preloader -->
     <div class="preloader">
@@ -35,7 +38,7 @@
     <!-- end preloader -->
 
 	<!-- begin #main-container -->
-	<div id="main-container">	
+		<div id="main-container">	
 		<div id="profile" class="profile-blog">
 			<div id="top-profile" class="expand add-expand">
 				<h1>Profile</h1>
@@ -61,45 +64,73 @@
 		</div>
 		<!-- end #profile -->
 
-		<!-- begin #portfolio-case -->
-		<div id="portfolio-case">
+		<!-- begin #blog-post -->
+		<div id="blog-post">
 			<div class="main-content">
 				<a href="index.html" class="close-icon expand"></a>
 				<div class="row">
 					<div class="col-md-10">
-						<h1 class="title">Relative Pose Estimation between RGB-D Camera Equipped Robots</h1>
-						<img class="portfolio-img" src="img/portfolio/eyebug.png" alt="Blog Image">
-						<img class="portfolio-img" src="img/portfolio/relative-pose.png" alt="Blog Image">
-						<!--<h2 class="title gray">Client</h2>
-						<div class="detail">Microsoft Inc.</div>
-						<h2 class="title gray">Reviews</h2>
-						<div class="review">
-							Katya is really lorem to work with lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut.
-							<div class="rating">
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star-half-empty"></span>
+						<h1 class="subtitle"><FONT COLOR="01A9E6">Trips Around North America</FONT></h1>
+											<div class="blog-details">
+						</div>
+						<img class="blog-img" src="img/blog/koala.jpg" alt="Blog Image">
+						<div class="blog-content">
+							<div class="dropcap">Sorry</div>
+							<div class="detail">
+								This page is still in progress. More details and photos will be updated soon.
 							</div>
-						</div>-->
-						<h2 class="title gray">Description</h2>
-						<div class="detail">
-							Our algorithm uses the depth information to estimate the relative pose of a robot when camera sensors mounted on different robots observe a common scene from different angles of view. To create the algorithm, we first developed a framework based on the beam-based sensor model to eliminate the adverse effects of the situations where two views of a scene each are partially seen by the sensors. Then, in order to cancel the bias introduced by the beam-based sensor model, we developed a scheme that allows the algorithm to symmetrize across the two views.
 						</div>
-						<h2 class="title gray">Programming Tools:</h2>
-						<div class="approach">
-						C++, Matlab.
-						</div>
-						<div class="btn-container">
-							<a href="paper/relative-pose.pdf" class="btn">Project Details</a>
-						</div>
+
+						<div id="map" style="width: 600px; height: 400px;margin:0 auto;" align="middle"></div>
+
+  						<script type="text/javascript">
+    						var locations = [
+      							['NYC', 40.741970, -73.999961, 9],
+      							['Boston', 42.361506, -71.033652, 8],
+      							['Baltimore', 39.294899, -76.658652, 7],
+      							['DC', 38.902703, -77.043174, 6],
+      							['Philadiaphia', 39.951610, -75.162665, 5],
+      							['LA',34.053501, -118.300496,4],
+      							['Vegas', 36.173792, -115.161267,3],
+      							['San Francisco', 37.772356, -122.444810,2],
+      							['Olando', 28.416625, -81.581630, 1]
+    						];
+
+    						var url_path = ['http://www.google.com', 'http://www.baidu.com','http://www.qq.com','http://www.sina.com','http://www.nba.com', 'http://www.google.com', 'http://www.google.com', 'http://www.google.com', 'http://www.google.com'];
+
+    						var map = new google.maps.Map(document.getElementById('map'), {
+      						zoom: 3,
+      						center: new google.maps.LatLng(40.689627, -98.850078),
+      						mapTypeId: google.maps.MapTypeId.ROADMAP
+    						});
+
+    						var infowindow = new google.maps.InfoWindow();
+
+    						var marker, i;
+
+    						for (i = 0; i < locations.length; i++) {  
+      							marker = new google.maps.Marker({
+        						position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        						url: url_path[i],
+        						map: map
+      						});
+
+      						google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        					return function() {
+        						window.location.href = marker.url;
+          						infowindow.setContent(locations[i][0]);
+          						infowindow.open(map, marker);
+        					}
+      						})(marker, i));
+    						}
+  						</script>
+  						<div> &nbsp &nbsp &nbsp &nbsp</div>
+
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- end #portfolio-case -->
+		<!-- end #blog-post -->
 
 	</div>
 	<!-- end #main-container -->
@@ -107,10 +138,10 @@
 	<!-- JavaScript Files -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/prefixfree.min.js"></script>
+	<script src="js/vendor/jquery.validate.min.js"></script>
 	<script src="js/vendor/fastclick.js"></script> 
 	<script src="js/vendor/morphext.min.js"></script>
 	<script src="js/smoothScrolls.js"></script>
-	<script src="js/portfolio-case.js"></script>
+	<script src="js/blog-post.js"></script>
 </body>
 </html>
-                            

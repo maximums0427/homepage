@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Max - Portfolio Case</title>
+	<title>Max - Project Case</title>
 	<meta charset="utf-8">
     <meta name="description" content="Responsive Creative CV Template">
     <meta name="author" content="Max">
@@ -20,6 +20,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
 	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+
 
 	<!-- Favicon -->
     <link rel="icon" type="image/png" href="img/katya-favicon.png">		
@@ -67,33 +68,18 @@
 				<a href="index.html" class="close-icon expand"></a>
 				<div class="row">
 					<div class="col-md-10">
-						<h1 class="title">Relative Pose Estimation between RGB-D Camera Equipped Robots</h1>
-						<img class="portfolio-img" src="img/portfolio/eyebug.png" alt="Blog Image">
-						<img class="portfolio-img" src="img/portfolio/relative-pose.png" alt="Blog Image">
-						<!--<h2 class="title gray">Client</h2>
-						<div class="detail">Microsoft Inc.</div>
-						<h2 class="title gray">Reviews</h2>
-						<div class="review">
-							Katya is really lorem to work with lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut.
-							<div class="rating">
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star"></span>
-								<span class="fa fa-star-half-empty"></span>
-							</div>
-						</div>-->
+						<h1 class="title">Vision-Based Cooperative Pose Estimation in Multi-Robot Systems Equipped with RGB-D Cameras</h1>
+						<img class="portfolio-img-full" src="img/portfolio/multi-robot-high.png" alt="Blog Image">
 						<h2 class="title gray">Description</h2>
 						<div class="detail">
-							Our algorithm uses the depth information to estimate the relative pose of a robot when camera sensors mounted on different robots observe a common scene from different angles of view. To create the algorithm, we first developed a framework based on the beam-based sensor model to eliminate the adverse effects of the situations where two views of a scene each are partially seen by the sensors. Then, in order to cancel the bias introduced by the beam-based sensor model, we developed a scheme that allows the algorithm to symmetrize across the two views.
+							We develop a new vision based cooperative pose estimation scheme for systems of mobile robots equipped with RGB-D cameras. We first model a multi-robot system as an edge-weighted graph. Then, based on this model, and by using the real-time color and depth data, the robots with shared field-of-views estimate their relative poses in pairwise. The system does not need the existence of a single common view shared by all robots, and it works in 3D scenes without any specific calibration pattern or landmark. The proposed scheme distributes working loads evenly in the system, hence it is scalable and the computing power of the participating robots is efficiently used.
 						</div>
 						<h2 class="title gray">Programming Tools:</h2>
 						<div class="approach">
 						C++, Matlab.
 						</div>
 						<div class="btn-container">
-							<a href="paper/relative-pose.pdf" class="btn">Project Details</a>
+							<a href="paper/cooperative-pose-estimation.pdf" class="btn">Project Details</a>
 						</div>
 					</div>
 				</div>

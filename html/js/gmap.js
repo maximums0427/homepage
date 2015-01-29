@@ -1,8 +1,21 @@
 jQuery(document).ready(function($){
 	//set your google maps parameters 51.5255069 -0.0836207
-	var latitude = 59.9174455,
-		longitude = 30.3250575,
-		map_zoom = 14;
+	var latitude = 14.930084,
+		longitude = 15.232422,
+		map_zoom = 1;
+
+	var locations = [
+      				    ['Asia', 34.235900, 100.703125, 4],
+      					['Pacific', -24.615036, 134.336010, 5],
+      					['America', 39.929662, -98.653281, 3],
+      					['Euro', 54.930084, 15.232422, 2]
+    				];
+
+    var url_path = ['blog-post-asia.html', 
+    				'blog-post-pacific.html',
+    				'blog-post-america.html',
+    				'blog-post-euro.html'];
+
 
 	//google map custom marker icon - .png fallback for IE11
 	var is_internetExplorer11= navigator.userAgent.toLowerCase().indexOf('trident') > -1;
@@ -199,12 +212,26 @@ jQuery(document).ready(function($){
     //inizialize the map
 	var map = new google.maps.Map(document.getElementById('google-container'), map_options);
 	//add a custom marker to the map				
-	var marker = new google.maps.Marker({
-	  	position: new google.maps.LatLng(latitude, longitude),
-	    map: map,
-	    visible: true,
+
+	var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+     	marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        url: url_path[i],
+        map: map,
+        visible: true,
 	 	icon: marker_url,
-	});
+     	});
+
+    	google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    		return function() {
+    			window.location.href = marker.url;
+        		infowindow.setContent(locations[i][0]);
+        		infowindow.open(map, marker);
+     		}
+    	})(marker, i));
+   	}
 
 	//add custom buttons for the zoom-in/zoom-out on the map
 	function CustomZoomControl(controlDiv, map) {
@@ -230,4 +257,3 @@ jQuery(document).ready(function($){
   	map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
 });
 
-  

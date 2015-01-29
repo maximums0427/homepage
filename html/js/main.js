@@ -34,7 +34,7 @@
       			$(".preloader-right").addClass("slide-right");
       			//	Typerjs function - Edit the sentences below
 				$('.hi .detail')
-					.typeTo("I am a PhD candidate in the research fields of computer vision, robotics, and 3D video processing. I also have skills in other fields like web development. While not working, I love to play basketball and the Jazz drum.");
+					.typeTo("I am a PhD candidate with the research fields in computer vision, robotics, and 3D video processing. I also have skills in other fields like web development. While not working, I love to play basketball and travel.");
       		});
 		});
 

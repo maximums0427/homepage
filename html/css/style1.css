@@ -250,6 +250,8 @@ body {
 }
 
 
+
+
 #features .expand {
 	position: absolute;
 	top: 0;
@@ -732,13 +734,6 @@ body {
 	transform: scale(1.15);
 }
 
-.masonry-item .detail {
-	position: relative;
-	z-index: 9999;
-	background: white;
-	border: 1px solid #ddd;
-}
-
 .masonry-item .overlay {
 	position: absolute;
 	top: 0;
@@ -776,18 +771,6 @@ body {
 	position: absolute;
 	width: 100%;
 	padding: 0 80px;
-}
-
-.masonry-title {
-	display: block;
-	text-align: center;
-	padding: 15px 60px;
-	text-transform: capitalize;
-	font-size: 17px;
-	font-family: 'Montserrat', serif;
-	color: #666;
-	border-width: 1px;
-    border-style: solid;
 }
 
 .masonry-item .overlay:hover {
@@ -1065,6 +1048,7 @@ body {
 	font-family: 'Droid Serif', serif;
 }
 
+.blog-img,
 .portfolio-img {
 	width: 45%;
 	border-radius: 3px;
@@ -1073,16 +1057,6 @@ body {
 	margin-right: 10px;
 	float:left;
 }
-
-.blog-img {
-	width: 25%;
-	border-radius: 3px;
-	margin-bottom: 3px;
-	margin-left: 10px;
-	margin-right: 10px;
-	float:left;
-}
-
 
 .portfolio-img {
 	margin-bottom: 30px !important;
@@ -1564,5 +1538,3 @@ body {
 	}
 
 }
-
-

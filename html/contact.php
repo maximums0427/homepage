@@ -1,5 +1,4 @@
-<?php 
-error_reporting(E_ALL ^ E_NOTICE); // hide all basic notices from PHP
+<?php error_reporting(E_ALL ^ E_NOTICE); // hide all basic notices from PHP
 
 //If the form is submitted
 if(isset($_POST['submitted'])) {
@@ -12,7 +11,7 @@ if(isset($_POST['submitted'])) {
 	// upon no failure errors let's email now!
 	if(!isset($hasError)) {
 		
-		$emailTo = 'balapa95@gmail.com';
+		$emailTo = 'maxwang427@gmail.com';
         $subject = 'You have message from '.$name;
 		$sendCopy = trim($_POST['sendCopy']);
 		$body = "Subject : $subjectContent \nName : $name \nEmail : $email \nMessage : $message";
