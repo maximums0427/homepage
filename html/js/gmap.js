@@ -226,7 +226,7 @@ jQuery(document).ready(function($){
 
     	google.maps.event.addListener(marker, 'click', (function(marker, i) {
     		return function() {
-    			window.location.href = marker.url;
+    			window.open(marker.url);
         		infowindow.setContent(locations[i][0]);
         		infowindow.open(map, marker);
      		}
