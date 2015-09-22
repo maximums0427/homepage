@@ -34,7 +34,7 @@
       			$(".preloader-right").addClass("slide-right");
       			//	Typerjs function - Edit the sentences below
 				$('.hi .detail')
-					.typeTo("I am a PhD candidate with the research fields in computer vision, robotics, and 3D video processing. I also have skills in other fields like web development. While not working, I love to play basketball and travel.");
+					.typeTo("I am a PhD student at Monash University, Melbourne. My research now focuses on visual sensor network, computer vision, and robotics.");
       		});
 		});
 
